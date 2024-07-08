@@ -100,4 +100,5 @@ RUN mkdir -p /opt/build-mk/debs
 RUN mkdir -p /opt/build-mk/patches
 COPY patches/* /opt/build-mk/patches/
 COPY build_check_mk.sh /opt/build-mk/build_check_mk.sh
+RUN chmod +x /opt/build-mk/build_check_mk.sh
 ENTRYPOINT ["/opt/build-mk/build_check_mk.sh"]
