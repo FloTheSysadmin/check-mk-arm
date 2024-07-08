@@ -1,0 +1,9 @@
+services:
+  check_mk_build:
+    container_name: check_mk_build_template
+    build:
+      dockerfile: ./Dockerfile
+  volumes:
+      - /opt/build-checkmk/debs:/opt/build-mk/debs
+      - /opt/build-checkmk/bookworm-2.2/root:/root
+      - /opt/build-checkmk/patches:/opt/build-mk/patches
