@@ -1,0 +1,10 @@
+--- Pipfile     2024-07-01 16:33:51.000000000 +0100
++++ Pipfile_v2  2024-07-08 17:33:46.924597046 +0100
+@@ -119,7 +119,6 @@
+ snmpsim-lextudio = "==1.0.5"  # needed by pysnmp integration tests
+ urllib3 = "~=1.26.15"  # needed by requests
+ pyopenssl = "==24.0.0"
+-pbr = "==5.11.1"  # needed by jira
+ pyghmi = "==1.5.60"  # needed by base for IPMI
+ requests = "~=2.31"
+ requests-kerberos = "==0.14.0"  # needed by check_bi_aggr

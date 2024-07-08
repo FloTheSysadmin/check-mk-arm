@@ -1,0 +1,10 @@
+--- omd/packages/Python/Python.make     2024-07-01 16:33:52.000000000 +0100
++++ omd/packages/Python/Python.make_v2  2024-07-08 17:28:03.991272231 +0100
+@@ -7,7 +7,7 @@
+ PYTHON_BUILD := $(BUILD_HELPER_DIR)/$(PYTHON_DIR)-build
+ PYTHON_INTERMEDIATE_INSTALL := $(BUILD_HELPER_DIR)/$(PYTHON_DIR)-install-intermediate
+ PYTHON_INSTALL := $(BUILD_HELPER_DIR)/$(PYTHON_DIR)-install
+-PYTHON_SYSCONFIGDATA := _sysconfigdata__linux_x86_64-linux-gnu.py
++PYTHON_SYSCONFIGDATA := _sysconfigdata__linux_aarch64-linux-gnu.py
+
+ PYTHON_INSTALL_DIR := $(INTERMEDIATE_INSTALL_BASE)/$(PYTHON_DIR)

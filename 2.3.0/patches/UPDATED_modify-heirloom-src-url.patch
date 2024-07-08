@@ -1,0 +1,11 @@
+--- omd/packages/heirloom-mailx/heirloom-mailx_http.bzl 2024-07-01 16:33:52.000000000 +0100
++++ omd/packages/heirloom-mailx/heirloom-mailx_http.bzl_v2      2024-07-08 17:49:11.877330594 +0100
+@@ -6,7 +6,7 @@
+     http_archive(
+         name = "heirloom-mailx",
+         urls = [
+-            "https://ftp.nl.debian.org/debian-archive/debian/pool/main/h/heirloom-mailx/" + filename,
++            "http://archive.ubuntu.com/ubuntu/pool/universe/h/heirloom-mailx/" + filename,
+             UPSTREAM_MIRROR_URL + filename,
+         ],
+         sha256 = sha256,
