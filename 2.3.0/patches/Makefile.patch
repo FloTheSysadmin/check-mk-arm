@@ -1,0 +1,20 @@
+--- Makefile    2023-08-20 01:15:49.000000000 +0200
++++ Makefile_v2 2023-09-06 16:21:50.371684491 +0200
+@@ -287,7 +287,8 @@
+            REGISTRY= ; \
+            echo "Installing from public registry" ; \
+         fi ; \
+-       npm ci --yes --audit=false --unsafe-perm $$REGISTRY
++       #npm ci --yes --audit=false --unsafe-perm $$REGISTRY
++       npm install
+        sed -i 's#"resolved": "https://artifacts.lan.tribe29.com/repository/npm-proxy/#"resolved": "https://registry.npmjs.org/#g' package-lock.json
+        touch node_modules/.bin/webpack node_modules/.bin/redoc-cli node_modules/.bin/prettier
+ 
+@@ -302,6 +303,7 @@
+ .INTERMEDIATE: .ran-webpack
+ $(JAVASCRIPT_MINI): .ran-webpack
+ $(THEME_CSS_FILES): .ran-webpack
++.ran-webpack: export NODE_OPTIONS := --max-old-space-size=2048
+ .ran-webpack: node_modules/.bin/webpack webpack.config.js postcss.config.js $(JAVASCRIPT_SOURCES) $(SCSS_SOURCES)
+        WEBPACK_MODE=$(WEBPACK_MODE) ENTERPRISE=$(ENTERPRISE) MANAGED=$(MANAGED) PLUS=$(PLUS) node_modules/.bin/webpack --mode=$(WEBPACK_MODE:quick=development)
+        touch $(JAVASCRIPT_MINI) $(THEME_CSS_FILES)

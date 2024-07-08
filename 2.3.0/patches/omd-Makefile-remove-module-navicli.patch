@@ -1,0 +1,10 @@
+--- omd/Makefile	2023-05-12 00:02:21.000000000 +0100
++++ omd/Makefile_v2	2023-06-09 09:16:01.097015535 +0100
+@@ -45,7 +45,6 @@
+     nagvis \
+     nrpe \
+     omd \
+-    navicli \
+     pnp4nagios \
+     maintenance \
+     patch \

@@ -1,0 +1,12 @@
+--- omd/packages/Python/Python.make	2022-05-26 01:02:30.000000000 +0100
++++ omd/packages/Python/Python.make_v2	2022-06-10 21:31:45.732838310 +0100
+@@ -83,7 +83,8 @@
+ 	        --with-ensurepip=install \
+ 	        --with-openssl=$(PACKAGE_OPENSSL_DESTDIR) \
+ 	        $(PYTHON_ENABLE_OPTIMIZATIONS) \
+-	        LDFLAGS="-Wl,--rpath,/omd/versions/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/lib $(PACKAGE_OPENSSL_LDFLAGS)"
++	        CFLAGS="${CFLAGS} -fno-semantic-interposition" \
++	        LDFLAGS="-Wl,--rpath,/omd/versions/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/lib -fno-semantic-interposition $(PACKAGE_OPENSSL_LDFLAGS)"
+ 	cd $(PYTHON_BUILD_DIR) ; \
+ 	    $(MAKE) -j2
+ 	$(TOUCH) $@
