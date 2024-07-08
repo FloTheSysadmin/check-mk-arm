@@ -1,15 +1,10 @@
 
-## Updates discontinued
+## Code ist currently being refactored. 
 
-Great news, there is an official commitment to add native ARM support for RPi 5 (ARMv8.2-A): [Checkmk – our road to ARM support](https://checkmk.com/blog/checkmk-our-road-arm-support).
-While you wait for this announcement to become true, you can continue to vote for the feature request: https://features.checkmk.com/suggestions/297317/arm-support-for-the-cee-and-cme.
+This code is forked from https://github.com/chrisss404/check-mk-arm
 
-Unfortunately, due to native ARM support on the horizon we have decided to retire this project (thank you [@martux69](https://github.com/martux69) for all your hard work supporting arm64 over all the years). 
-This decision was based on the fact that keeping up with upstream changes has recently become increasingly time-consuming, additionally other (personal) things have become more important, so that there is no longer enough time.
-
-If anyone would like to take over, please reach out.
-
-![Checkmk](https://raw.github.com/chrisss404/check-mk-arm/master/data/check_mk.png)
+I will try to refactor and update it for my own use cases.
+The build instructions will be documented in the future. Currently I am working on updated builds. 
 
 ### Tips & General Information
 

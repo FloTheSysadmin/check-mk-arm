@@ -1,5 +1,5 @@
---- omd/packages/heirloom-mailx/heirloom-mailx_http.bzl	2023-05-12 00:02:21.000000000 +0100
-+++ omd/packages/heirloom-mailx/heirloom-mailx_http.bzl_v2	2023-06-09 09:14:34.707366151 +0100
+--- omd/packages/heirloom-mailx/heirloom-mailx_http.bzl 2023-05-12 01:02:21.000000000 +0200
++++ omd/packages/heirloom-mailx/heirloom-mailx_http.bzl_v2      2023-05-28 17:44:04.992958010 +0200
 @@ -5,8 +5,7 @@
      http_archive(
          name = "heirloom-mailx",
