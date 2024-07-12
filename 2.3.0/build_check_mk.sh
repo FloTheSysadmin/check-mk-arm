@@ -30,17 +30,17 @@ if [ ! -f check-mk-cloud-${VERSION}_0.kinetic_amd64.deb ]; then
     wget https://download.checkmk.com/checkmk/${VERSION}/check-mk-cloud-${VERSION}_0.noble_amd64.deb   ### Update to noble
 fi
 
-# create symlink to c++-12 compiler if not exists
-if [ ! -f /usr/bin/g++-12 ]; then
-   echo "create symlink to c++-12 ..."
-   ln -sf /usr/bin/g++ /usr/bin/g++-12
-fi
+# # create symlink to c++-12 compiler if not exists
+# if [ ! -f /usr/bin/g++-12 ]; then
+#    echo "create symlink to c++-12 ..."
+#    ln -sf /usr/bin/g++ /usr/bin/g++-12
+# fi
 
-# create symlink to c++-13 compiler if not exists
-if [ ! -f /usr/bin/g++-13 ]; then
-   echo "create symlink to c++-13 ..."
-   ln -sf /usr/bin/g++ /usr/bin/g++-13
-fi
+# # create symlink to c++-13 compiler if not exists
+# if [ ! -f /usr/bin/g++-13 ]; then
+#    echo "create symlink to c++-13 ..."
+#    ln -sf /usr/bin/g++ /usr/bin/g++-13
+# fi
 
 #python3.12 -m pip install --upgrade pip --break-system-packages
 
