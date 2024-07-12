@@ -72,7 +72,7 @@ for FILE in "../patches/"*.patch; do
    if [ -f "$FILE" ]; then
       BASENAME=$(basename "$FILE")
       if [[ "$BASENAME" != ZZZ___* ]]; then            
-         patch -p0 < $FILE
+         patch -f -p0 < $FILE
       fi
    fi
 done
