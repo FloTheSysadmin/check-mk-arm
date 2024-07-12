@@ -1,0 +1,18 @@
+--- Pipfile     2024-07-01 16:33:51.000000000 +0100
++++ Pipfile_v2  2024-07-12 11:30:01.661157451 +0100
+@@ -34,7 +34,6 @@
+ networkx = "==3.2.1" # needed for py-import-cycles
+ pexpect = "==4.9.0" # used for update testing
+ pipfile = "==0.0.2" # for generating import names during int tests
+-playwright = "==1.41.1"  # used for in-browser testing
+ polyfactory = "==2.14.1" # used for generating mock data for unit tests
+ pre-commit = "==3.6.0"  # used to fix / find issues before committing changes
+ preprocess = "==2.0.0" # implicit dependency of pytest-testmon, might be removed when testmon is updated
+@@ -119,7 +118,6 @@
+ snmpsim-lextudio = "==1.0.5"  # needed by pysnmp integration tests
+ urllib3 = "~=1.26.15"  # needed by requests
+ pyopenssl = "==24.0.0"
+-pbr = "==5.11.1"  # needed by jira
+ pyghmi = "==1.5.60"  # needed by base for IPMI
+ requests = "~=2.31"
+ requests-kerberos = "==0.14.0"  # needed by check_bi_aggr

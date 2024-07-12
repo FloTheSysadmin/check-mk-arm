@@ -65,9 +65,16 @@ cd check-mk-raw-${VERSION}.cre
 # patch -p0 < ../patches/modify-heirloom-src-url.patch
 # patch -p0 < ../patches/modify-path-fake-windows.patch
 
+
+# Install all .patch files that dont start with 'ZZZ__'
 echo "installing patches ...."
 for FILE in "../patches/"*.patch; do
-    patch -p0 < $FILE
+   if [ -f "$FILE" ]; then
+      BASENAME=$(basename "$FILE")
+      if [[ "$BASENAME" != ZZZ___* ]]; then            
+         patch -p0 < $FILE
+      fi
+   fi
 done
 
 ./configure

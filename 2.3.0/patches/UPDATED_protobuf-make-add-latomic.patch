@@ -1,5 +1,5 @@
 --- omd/packages/protobuf/protobuf.make 2024-07-01 16:33:52.000000000 +0100
-+++ omd/packages/protobuf/protobuf.make_v2      2024-07-08 17:31:26.517692271 +0100
++++ omd/packages/protobuf/protobuf.make_v2      2024-07-12 11:25:34.466863009 +0100
 @@ -68,7 +68,7 @@
             `: Let me know in case you got a cleaner approach. ` \
             cd src && \
