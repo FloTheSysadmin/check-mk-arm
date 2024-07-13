@@ -71,13 +71,18 @@ echo "installing patches ...."
 for FILE in "../patches/"*.patch; do
    if [ -f "$FILE" ]; then
       BASENAME=$(basename "$FILE")
-      if [[ "$BASENAME" != ZZZ___* ]]; then            
-         patch -f -p0 < $FILE
+      if [[ "$BASENAME" != ZZZ___* ]]; then
+         patch -f -p0 < $FILE > /dev/null
+         if [ $? != 0 ]; then
+            echo "failed with Patch: $BASENAME"
+         else 
+            echo "success with Patch: $BASENAME"
+         fi 
       fi
    fi
 done
 
-./configure
+#./configure File does not exist in this version
 
 echo "prepare windows artifacts ..."
 ar x ../check-mk-cloud-${VERSION}_0.noble_amd64.deb

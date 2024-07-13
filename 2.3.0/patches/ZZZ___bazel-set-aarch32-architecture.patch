@@ -1,3 +1,4 @@
+# Only build arm64 
 --- scripts/run-bazel-build.sh  2023-05-12 01:02:22.000000000 +0200
 +++ scripts/run-bazel-build.sh_v2       2023-05-28 17:07:49.868227060 +0200
 @@ -21,10 +21,9 @@
