@@ -72,9 +72,9 @@ for FILE in "../patches/"*.patch; do
    if [ -f "$FILE" ]; then
       BASENAME=$(basename "$FILE")
       if [[ "$BASENAME" != ZZZ___* ]]; then
-         patch -f -p0 < $FILE > /dev/null
+         patch -l -f -p0 < $FILE > /dev/null
          if [ $? != 0 ]; then
-            echo "failed with  Patch: $BASENAME"
+            echo "failure with Patch: $BASENAME"
          else 
             echo "success with Patch: $BASENAME"
          fi 
