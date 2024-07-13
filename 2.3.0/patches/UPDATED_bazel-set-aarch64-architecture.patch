@@ -1,5 +1,5 @@
---- scripts/run-bazel-build.sh  2023-05-12 01:02:22.000000000 +0200
-+++ scripts/run-bazel-build.sh_v2       2023-05-28 17:07:49.868227060 +0200
+--- scripts/run-bazel-build.sh  2024-07-01 15:33:52.000000000 +0000
++++ scripts/run-bazel-build.sh_v2       2024-07-13 10:45:54.914186968 +0000
 @@ -21,10 +21,9 @@
      "${ROOT_DIR}"/scripts/run-pipenv run \
          "${ROOT_DIR}"/scripts/create_build_environment_variables.py \
@@ -7,9 +7,10 @@
 -        "pathhash:/usr/lib/x86_64-linux-gnu/libc.so" \
 -        "pathhash:/lib64/libc.so.6" \
 -        "pathhash:/usr/lib64/libc.so" \
--        "pathhash:/opt/gcc-12.2.0" \
+-        "pathhash:/opt/gcc-13.2.0"
 +        "pathhash:/usr/lib/aarch64-linux-gnu/libc.so" \
 +        "pathhash:/usr/lib/aarch64-linux-gnu/libc.so.6" \
 +        "pathhash:/usr/lib/gcc/aarch64-linux-gnu/13" \
-         "env:PATH:/opt/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
  )"
+
+ eval "${BUILD_ENVIRONMENT}"
