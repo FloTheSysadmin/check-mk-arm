@@ -74,7 +74,7 @@ for FILE in "../patches/"*.patch; do
       if [[ "$BASENAME" != ZZZ___* ]]; then
          patch -f -p0 < $FILE > /dev/null
          if [ $? != 0 ]; then
-            echo "failed with Patch: $BASENAME"
+            echo "failed with  Patch: $BASENAME"
          else 
             echo "success with Patch: $BASENAME"
          fi 
