@@ -1,0 +1,11 @@
+--- omd/packages/perl-modules/lib/BuildHelper.pm      2024-07-14 10:41:51.802027280 +0000
++++ omd/packages/perl-modules/lib/BuildHelper.pm_v2   2024-07-14 10:41:35.273141997 +0000
+@@ -634,7 +634,7 @@
+     if($file =~ m/\.zip$/gmx) {
+         cmd("unzip $file");
+     } else {
+-        cmd("tar zxf $file");
++        cmd("tar zxf $file --no-same-owner");
+     }
+     my $dir = $file;
+     $dir =~  s/(\.tar\.gz|\.tgz|\.zip)//g;
