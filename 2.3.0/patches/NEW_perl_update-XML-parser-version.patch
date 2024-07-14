@@ -1,0 +1,15 @@
+--- omd/packages/perl-modules/perl-modules_http.bzl     2024-07-01 15:33:52.000000000 +0000
++++ omd/packages/perl-modules/perl-modules_http.bzl_v2  2024-07-14 08:58:12.041331707 +0000
+@@ -297,9 +297,9 @@
+         "sha256": "0a5188686e6b71ef3464a0d74f18bda62912b8e35aeb714483ab5f0b157a7b5e",
+         "url": "https://src.fedoraproject.org/repo/extras/perl-Socket/Socket-2.019.tar.gz/8afec24ac4e084e0da0600c2018ccead/Socket-2.019.tar.gz",
+     },
+-    "XML-Parser-2.44.tar.gz": {
+-        "sha256": "1ae9d07ee9c35326b3d9aad56eae71a6730a73a116b9fe9e8a4758b7cc033216",
+-        "url": "https://www.cpan.org/modules/by-module/XML/XML-Parser-2.44.tar.gz",
++    "XML-Parser-2.47.tar.gz": {
++        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
++        "url": "https://www.cpan.org/modules/by-module/XML/XML-Parser-2.47.tar.gz",
+     },
+     "XML-Twig-3.52.tar.gz": {
+         "sha256": "fef75826c24f2b877d0a0d2645212fc4fb9756ed4d2711614ac15c497e8680ad",

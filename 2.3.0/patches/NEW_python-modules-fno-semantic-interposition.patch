@@ -1,0 +1,11 @@
+--- omd/packages/python3-modules/build-python3-modules.bzl      2024-07-01 15:33:52.000000000 +0000
++++ omd/packages/python3-modules/build-python3-modules.bzl_v2   2024-07-14 08:36:14.095864127 +0000
+@@ -101,7 +101,7 @@
+
+     # install requirements
+     export CFLAGS="-I$$HOME/$$EXT_DEPS_PATH/openssl/openssl/include -I$$HOME/$$EXT_DEPS_PATH/freetds/freetds/include -I$$HOME/$$EXT_DEPS_PATH/python/python/include/python{pyMajMin}/"
+-    export LDFLAGS="-L$$HOME/$$EXT_DEPS_PATH/openssl/openssl/lib -L$$HOME/$$EXT_DEPS_PATH/freedts/freedts/lib -L$$HOME/$$EXT_DEPS_PATH/python/python/lib -Wl,--strip-debug -Wl,--rpath,/omd/versions/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/lib"
++    export LDFLAGS="-L$$HOME/$$EXT_DEPS_PATH/openssl/openssl/lib -L$$HOME/$$EXT_DEPS_PATH/freedts/freedts/lib -L$$HOME/$$EXT_DEPS_PATH/python/python/lib -Wl,--strip-debug -Wl,--rpath,/omd/versions/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/lib -fno-semantic-interposition"
+     {git_ssl_no_verify}\\
+     $$PYTHON_EXECUTABLE -m pip install \\
+      `: dont use precompiled things, build with our build env ` \\

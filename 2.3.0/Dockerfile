@@ -8,6 +8,8 @@ RUN apt-get update \
     && apt-get install -y \
     wget \
     debhelper \
+    gcc-14 \
+    g++-14 \
     curl \
     lsb-release \
     sudo \

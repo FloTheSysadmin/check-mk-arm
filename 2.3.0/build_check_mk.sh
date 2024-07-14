@@ -42,6 +42,12 @@ fi
 #    ln -sf /usr/bin/g++ /usr/bin/g++-13
 # fi
 
+# # create symlink to c++-13 compiler if not exists
+# if [ ! -f /usr/bin/g++-14 ]; then
+#    echo "create symlink to c++-14 ..."
+#    ln -sf /usr/bin/g++ /usr/bin/g++-14
+# fi
+
 #python3.12 -m pip install --upgrade pip --break-system-packages
 
 export USE_EXTERNAL_PIPENV_MIRROR=true

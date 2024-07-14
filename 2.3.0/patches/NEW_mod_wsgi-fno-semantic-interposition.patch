@@ -1,0 +1,11 @@
+--- omd/packages/mod_wsgi/BUILD.mod_wsgi.bazel  2024-07-01 15:33:52.000000000 +0000
++++ omd/packages/mod_wsgi/BUILD.mod_wsgi.bazel_v2       2024-07-14 08:39:22.172344770 +0000
+@@ -23,7 +23,7 @@
+     env = {
+         "ORIGIN_VAR": "\\\\$$\\$$ORIGIN",
+         "CFLAGS": "-I$${EXT_BUILD_DEPS}/python/include/python%s/" % PYTHON_MAJOR_DOT_MINOR,
+-        "LDFLAGS": "-L$${EXT_BUILD_DEPS}/python/lib -Wl,--strip-debug -Wl,--rpath,/omd/versions/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/lib",
++        "LDFLAGS": "-L$${EXT_BUILD_DEPS}/python/lib -Wl -fno-semantic-interposition ,--strip-debug -Wl,--rpath,/omd/versions/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/lib",
+         "LD_LIBRARY_PATH": "$$EXT_BUILD_DEPS/python/lib/",
+     },
+     lib_source = ":all_srcs",
