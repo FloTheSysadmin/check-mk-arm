@@ -7,6 +7,7 @@ RUN mkdir -p /usr/share/man/man1
 RUN apt-get update \
     && apt-get install -y \
     wget \
+    cargo \
     debhelper \
     gcc-14 \
     g++-14 \
