@@ -166,7 +166,8 @@ RUN pip3 -V
 #RUN cp /usr/local/bin/pipenv* /usr/bin/
 #RUN cp /usr/local/bin/virtualenv* /usr/bin/
 
-COPY bazel-5.3.2-linux-arm64 /usr/bin/bazel
+RUN cd /tmp && wget -q https://github.com/bazelbuild/bazel/releases/download/7.2.1/bazel-7.2.1-linux-arm64 
+RUN mv /tmp/bazel-7.2.1-linux-arm64 /usr/bin/bazel
 RUN chmod 755 /usr/bin/bazel
 
 #RUN ln -sf /usr/bin/g++ /usr/bin/g++-12
@@ -175,5 +176,7 @@ ENV DISTRO="debian" DISTRO_CODE="bookworm"
 
 RUN mkdir -p /opt/build-mk/debs
 RUN mkdir -p /opt/build-mk/patches
-
+COPY patches/* /opt/build-mk/patches/
+COPY build_check_mk.sh /opt/build-mk/build_check_mk.sh
+RUN chmod +x /opt/build-mk/build_check_mk.sh
 ENTRYPOINT ["/opt/build-mk/patches/build_check_mk.sh"]
