@@ -1,5 +1,5 @@
---- xmlsec1_http.bzl    2024-08-07 11:43:35.000000000 +0000
-+++ xmlsec1_http.bzl_v2 2024-09-06 09:19:03.592349895 +0000
+--- omd/packages/xmlsec1/xmlsec1_http.bzl    2024-08-07 11:43:35.000000000 +0000
++++ omd/packages/xmlsec1/xmlsec1_http.bzl_v2 2024-09-06 09:19:03.592349895 +0000
 @@ -6,8 +6,8 @@
      http_archive(
          name = "xmlsec1",
