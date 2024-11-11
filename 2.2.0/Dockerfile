@@ -166,8 +166,8 @@ RUN pip3 -V
 #RUN cp /usr/local/bin/pipenv* /usr/bin/
 #RUN cp /usr/local/bin/virtualenv* /usr/bin/
 
-RUN cd /tmp && wget -q https://github.com/bazelbuild/bazel/releases/download/7.2.1/bazel-7.2.1-linux-arm64 
-RUN mv /tmp/bazel-7.2.1-linux-arm64 /usr/bin/bazel
+RUN cd /tmp && wget -q https://github.com/bazelbuild/bazel/releases/download/7.4.0/bazel-7.4.0-linux-arm64 
+RUN mv /tmp/bazel-7.4.0-linux-arm64 /usr/bin/bazel
 RUN chmod 755 /usr/bin/bazel
 
 #RUN ln -sf /usr/bin/g++ /usr/bin/g++-12
