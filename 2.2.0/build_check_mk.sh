@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION="2.2.0p33"
+VERSION="2.2.0p36"
 
 if [ $# -gt 0 ]; then
   VERSION="$1"
