@@ -65,6 +65,10 @@ for FILE in "../patches/"*.patch; do
    fi
 done
 
+### Copy Pipfile.lock
+
+cp ../patches/Pipfile.lock .
+
 ./configure
 
 echo "prepare windows artifacts ..."
