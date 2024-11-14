@@ -49,21 +49,21 @@ export USE_EXTERNAL_PIPENV_MIRROR=true
 echo "going to check-mk source path ...."
 cd check-mk-raw-${VERSION}.cre
 
-# patch files
+# Install all .patch files that dont start with 'ZZZ__'
 echo "installing patches ...."
-patch -p0 < ../patches/defines.make-use-official-python-mirror.patch
-patch -p0 < ../patches/Makefile-reduce-webpack-memory-consumption.patch
-patch -p0 < ../patches/Makefile-replace-npm-clean-install-with-install.patch
-patch -p0 < ../patches/omd-Makefile-remove-module-navicli.patch
-patch -p0 < ../patches/python-make-add-fno-semantic-interposition.patch
-patch -p0 < ../patches/python-make-set-aarch64-architecture.patch
-patch -p0 < ../patches/protobuf-make-add-latomic.patch
-patch -p0 < ../patches/pipfile-remove-entries.patch
-patch -p0 < ../patches/pipfile-update-pymssql.patch
-patch -p0 < ../patches/xmlsec1-fix-source-url.patch
-patch -p0 < ../patches/bazel-set-aarch64-architecture.patch
-patch -p0 < ../patches/modify-heirloom-src-url.patch
-patch -p0 < ../patches/modify-path-fake-windows.patch
+for FILE in "../patches/"*.patch; do
+   if [ -f "$FILE" ]; then
+      BASENAME=$(basename "$FILE")
+      if [[ "$BASENAME" != ZZZ___* ]]; then
+         patch -l -f -p0 < $FILE > /dev/null
+         if [ $? != 0 ]; then
+            echo "failure with Patch: $BASENAME"
+         else 
+            echo "success with Patch: $BASENAME"
+         fi 
+      fi
+   fi
+done
 
 ./configure
 

@@ -130,8 +130,8 @@ RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
 RUN apt-get update -y && apt-get install -y nodejs
 
 RUN apt-get remove -y cmake
-RUN wget https://github.com/Kitware/CMake/releases/download/v3.26.4/cmake-3.26.4-linux-aarch64.sh && chmod 755 cmake-3.26.4-linux-aarch64.sh
-RUN ./cmake-3.26.4-linux-aarch64.sh --skip-license --prefix=/usr
+RUN wget https://github.com/Kitware/CMake/releases/download/v3.31.0/cmake-3.31.0-linux-aarch64.sh && chmod 755 cmake-3.31.0-linux-aarch64.sh
+RUN ./cmake-3.31.0-linux-aarch64.sh --skip-license --prefix=/usr
 
 RUN apt-get autoremove -y
 

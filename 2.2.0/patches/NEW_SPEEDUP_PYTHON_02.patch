@@ -1,0 +1,20 @@
+--- ./omd/packages/Python/Python.make.2	2024-11-14 17:18:41.556797613 +0100
++++ ./omd/packages/Python/Python.make	2024-10-25 00:29:55.000000000 +0200
+@@ -94,7 +94,7 @@
+ 	        $(PYTHON_ENABLE_OPTIMIZATIONS) \
+ 	        LDFLAGS="-Wl,--rpath,/omd/versions/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/lib $(PACKAGE_OPENSSL_LDFLAGS)"
+ 	cd $(PYTHON_BUILD_DIR) ; \
+-	    $(MAKE) -j6
++	    $(MAKE) -j2
+ 	$(TOUCH) $@
+ 
+ $(PYTHON_SITECUSTOMIZE_COMPILED): $(PYTHON_SITECUSTOMIZE_SOURCE) $(PYTHON_COMPILE)
+@@ -107,7 +107,7 @@
+ # Install python files (needed by dependent packages like mod_python,
+ # python-modules, ...) during compilation and install targets.
+ # NOTE: -j1 seems to be necessary when --enable-optimizations is used
+-	$(MAKE) -j6 -C $(PYTHON_BUILD_DIR) DESTDIR=$(PYTHON_INSTALL_DIR) install
++	$(MAKE) -j1 -C $(PYTHON_BUILD_DIR) DESTDIR=$(PYTHON_INSTALL_DIR) install
+ # As we're now setting the prefix during ./configure, we need to clean up here the folder structure to get
+ # the same one as before.
+ 	$(RSYNC) $(PYTHON_INSTALL_DIR)$(PYTHON_PREFIX)/* $(PYTHON_INSTALL_DIR)
