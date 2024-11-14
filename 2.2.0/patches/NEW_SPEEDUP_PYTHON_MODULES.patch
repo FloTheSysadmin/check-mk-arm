@@ -1,0 +1,35 @@
+--- omd/packages/python3-modules/python3-modules.make	2024-10-25 00:29:55.000000000 +0200
++++ omd/packages/python3-modules/python3-modules.make.2	2024-11-14 17:41:57.801776684 +0100
+@@ -71,9 +71,8 @@
+             install -m 755 "$(PACKAGE_DIR)/omd/use_system_openssl" "$(PYTHON3_MODULES_WORK_DIR)/git" ; \
+ 	    $(PACKAGE_PYTHON_EXECUTABLE) -m pip install \
+ 		`: dont use precompiled things, build with our build env ` \
+-		--no-binary=":all:" \
++		--only-binary=":all:" \
+ 		--no-deps \
+-		--compile \
+ 		--isolated \
+ 		--ignore-installed \
+ 		--no-warn-script-location \
+@@ -81,9 +80,8 @@
+ 		git+https://github.com/Checkmk/netapp-ontap-cmk.git@e38ce4ce357ad2ea8f47260c269757f8805bdbce ; \
+ 	    $(PACKAGE_PYTHON_EXECUTABLE) -m pip install \
+ 		`: dont use precompiled things, build with our build env ` \
+-		--no-binary=":all:" \
++		--only-binary=":all:" \
+ 		--no-deps \
+-		--compile \
+ 		--isolated \
+ 		--ignore-installed \
+ 		--no-warn-script-location \
+@@ -91,9 +89,8 @@
+ 		-r requirements-dist.txt ; \
+ 	    $(PACKAGE_PYTHON_EXECUTABLE) -m pip install \
+ 		`: dont use precompiled things, build with our build env ` \
+-		--no-binary=":all:" \
++		--only-binary=":all:" \
+ 		--no-deps \
+-		--compile \
+ 		--isolated \
+ 		--ignore-installed \
+ 		--no-warn-script-location \

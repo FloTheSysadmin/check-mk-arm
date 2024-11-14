@@ -3,7 +3,7 @@
 @@ -47,9 +47,8 @@
          --with-ensurepip=install \
          --with-openssl="${OPENSSL_PATH}" \
-         --enable-optimizations \
+-         --enable-optimizations \
 -        --with-lto \
          --enable-shared
 -    make -j2
