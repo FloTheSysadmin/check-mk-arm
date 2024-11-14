@@ -1,5 +1,5 @@
---- ./omd/packages/Python/Python.make.2	2024-11-14 17:18:41.556797613 +0100
-+++ ./omd/packages/Python/Python.make	2024-10-25 00:29:55.000000000 +0200
+--- omd/packages/Python/Python.make.2	2024-11-14 17:18:41.556797613 +0100
++++ omd/packages/Python/Python.make	2024-10-25 00:29:55.000000000 +0200
 @@ -94,7 +94,7 @@
  	        $(PYTHON_ENABLE_OPTIMIZATIONS) \
  	        LDFLAGS="-Wl,--rpath,/omd/versions/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/lib $(PACKAGE_OPENSSL_LDFLAGS)"

@@ -1,5 +1,5 @@
---- ./buildscripts/infrastructure/build-nodes/scripts/install-python.sh	2024-10-25 00:29:54.000000000 +0200
-+++ ./buildscripts/infrastructure/build-nodes/scripts/install-python.sh.2	2024-11-14 17:08:39.636825281 +0100
+--- buildscripts/infrastructure/build-nodes/scripts/install-python.sh	2024-10-25 00:29:54.000000000 +0200
++++ buildscripts/infrastructure/build-nodes/scripts/install-python.sh.2	2024-11-14 17:08:39.636825281 +0100
 @@ -47,9 +47,8 @@
          --with-ensurepip=install \
          --with-openssl="${OPENSSL_PATH}" \
