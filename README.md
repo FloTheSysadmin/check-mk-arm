@@ -3,6 +3,8 @@
 
 This code is forked from https://github.com/chrisss404/check-mk-arm
 
+Packages for current Checkmk versions (2.3, 2.4 and 2.5; arm64; Debian 12/13 and Ubuntu 24.04) are available here: https://github.com/sergiodadi/check-mk-raspberry.
+
 I will try to refactor and update it for my own use cases.
 The build instructions will be documented in the future. Currently I am working on updated builds. 
 
